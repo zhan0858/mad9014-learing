@@ -5,17 +5,26 @@
  * Then assign values to the variables as needed so that there is one of each type: 
  * `Boolean`, `String`, `Number`, `undefined`, and`null`.
  */
-let isOpen = true;
-let name = "Lulu Zhang";
-let age = 28;
-let value = undefined;
-let sum = null;
+
+let isOpen;
+let myName;
+let age;
+let value;
+let sum;
+
+isOpen = true;
+myName = "Lulu Zhang";
+age = 28;
+value = undefined;
+sum = null;
 
 
 /**
  * 2. Declare four ** meaningfully named ** variables with `const`.
  * Assign primitive values to two of them and any kind of Objects to the other two.
  */
+
+
 const max = 100;
 const season = "fall";
 
@@ -44,14 +53,14 @@ temp = second;
 second = first;
 first = temp;
 
-// console.log('first = ' + first + ', second = ' + second + ', temp = ' + temp);
+console.log('first = ' + first + ', second = ' + second + ', temp = ' + temp);
 
 /**
  * 4. What are all 9 of the different possible values (datatypes) returned by the typeof operator?
  */
 
 console.log('1. typeof isOpen = ', typeof isOpen); // boolean
-console.log('2. typeof name = ', typeof name); // string
+console.log('2. typeof myName = ', typeof myName); // string
 console.log('3. typeof age = ', typeof age); // number
 console.log('4. typeof value = ', typeof value); // undefined
 console.log('5. sum = null, typeof sum = ', typeof sum); // object
