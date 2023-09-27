@@ -7,8 +7,3 @@ console.log(welcome('Lulu')); // just only firstName
 console.log(welcome(undefined, 'Zhang')); // just only lastName
 console.log(welcome(undefined, undefined, 80));
 console.log(welcome(undefined, 'Zhang', 80));
-
-
-
-
-
