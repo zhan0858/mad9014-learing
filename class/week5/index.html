@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Node</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=REM:wght@200;300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+
+        <a href="../../index.html" class="back">Back To Home</a>
+        
+        <section class="inclass">
+            <p>Hi</p>
+            <p>hello</p>
+        </section>
+
+        <section class="doc">
+            <div>
+                <ul>
+                    <li>
+                        <code>Document: createElement()</code>
+
+                    </li>
+                    <li><code>element.innerHTML()</code></li>
+                    <li>
+                        <code>window.addEventListener("load",() => {})</code>
+                        <span class="comment-zh">监听事件</span>
+                    </li>
+                    <li>
+                        <code>.classList</code>
+                        <span class="comment-en"> add or remove class</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="inclass2">
+            <h2>Our Team</h2>
+            <div id="user-cards"></div>
+        </section>
+
+        <section class="todo__list">
+            <h1>Task Lists</h1>
+            <div class="form">
+                <form id="todo__form">
+                    <label for="taskInput">Create a task: </label>
+                    <input type="text" id="taskInput" placeholder="Enter a new task">
+                </form>
+                <button id="addTaskButton">Add Task</button>
+                <button id="clearTaskButton">Clear All Task</button>
+            </div>
+            <ul id="taskList"></ul>
+
+        </section>
+
+    </main>
+    <script src="data.js" type="text/javascript"></script>
+    <script src="main.js" type="text/javascript"></script>
+</body>
+
+</html>

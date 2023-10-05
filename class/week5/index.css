@@ -1,0 +1,122 @@
+html {
+    background-color: #ccc;
+    margin: 0;
+    padding: 0;
+    font-family: 'REM', sans-serif;
+    ;
+}
+
+.back {
+    margin: 1rem;
+    background-color: rgb(25, 38, 34);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.inclass,
+.doc,
+.inclass2,
+.todo__list {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem 0.875rem;
+}
+
+li {
+    margin: 0.5rem 0;
+}
+
+code {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+    padding: 0.125rem 0.3rem;
+    border-radius: 0.1rem;
+}
+
+.comment-zh {
+    color: #004b32;
+    font-family: 'ZCOOL XiaoWei', sans-serif;
+}
+
+.comment-en {
+    color: #004b32;
+}
+
+.comment-zh::before,
+.comment-en::before {
+    content: '// ';
+}
+
+h2 {
+    text-align: center;
+}
+
+#user-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.user-card {
+    width: 300px;
+    border: 1px solid #a2a2a2;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    /* background-color: #e9e9e9; */
+}
+
+.user-image {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.form {
+    display: flex;
+}
+
+input {
+    font-size: 18px;
+    line-height: 24px;
+    margin-left: 8px;
+    border: 2px solid #4a635b;
+    border-radius: 4px;
+}
+
+input:hover,
+input:focus {
+    border: 2px solid #a0c0b6;
+    border-radius: 4px;
+}
+
+
+
+#addTaskButton,
+#clearTaskButton {
+    margin-left: 10px;
+    background-color: rgb(25, 38, 34);
+    border: none;
+    border-radius: 8px;
+    padding: 4px 8px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#addTaskButton:hover,
+#addTaskButton:focus,
+#clearTaskButton:hover,
+#clearTaskButton:focus {
+    background-color: rgb(70, 90, 84);
+}
