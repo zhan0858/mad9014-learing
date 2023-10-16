@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NameSpace</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <span>see each other's variables within the same global scope.</span>
+
+    <h2>ES Modules</h2>
+    <p><code>type="module"</code> in <code>script</code> tag</p>
+    <p>With no <code>export</code> there will be nothing to <code>import</code></p>
+    <p>If there is <span class="point">only</span> going to be <span class="point">one</span> thing exported from a
+        file, then we can
+        add the
+        keyword <code>default</code> to an export statement.</p>
+    <p>In this way, the default export <span class="point">becomes an exported object</span> instead of being wrapped in
+        one.</p>
+    <!-- TODO <pre id="code_block">
+        <span>print(1)</span>
+    </pre> -->
+
+    <script src="./index.js" type="text/javascript"></script>
+    <script src="./module.js" type="module"></script>
+
+</body>
+
+
+</html>
