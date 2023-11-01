@@ -1,12 +1,14 @@
 
 let getApi = new Promise((resolve, reject) => {
-    let number = Math.floor(Math.random() * 10);
-    console.log(number)
-    if (number % 2 == 0) {
-        resolve('Success')
-    } else {
-        reject('Failed')
-    }
+
+    // let number = Math.floor(Math.random() * 10);
+    // console.log(number)
+    // if (number % 2 == 0) {
+    //     resolve('Success')
+    // } else {
+    //     reject('Failed')
+    // }
+
 })
 
 getApi.then((message) => {
@@ -52,7 +54,7 @@ let p4 = new Promise((resolve, reject) => {
     reject('p4');
 });
 let p5 = new Promise((resolve, reject) => {
-    resolve('p5');
+    reject('p5');
 });
 //race gives us the first result back... good or bad
 Promise.race([p5, p4])
@@ -63,11 +65,12 @@ Promise.race([p5, p4])
         console.log('First one back was rejected ' + err);
     });
 
-// ? any only runs the catch if all the promises failed
-// Promise.any([p4, p5])
-//     .then((response) => {
-//         console.log('First successful result is back ' + response);
-//     })
-//     .catch((err) => {
-//         console.log('no successful results ' + err);
-//     });
+// any only runs the catch if all the promises failed
+// * Promise.any is not a function update node -v 
+Promise.any([p4, p5])
+    .then((response) => {
+        console.log('First successful result is back ' + response);
+    })
+    .catch((err) => {
+        console.log('no successful results ' + err);
+    });
