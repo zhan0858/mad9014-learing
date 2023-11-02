@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../index.css">
+
+    <style>
+        li {
+            cursor: pointer;
+            padding: 0.5rem;
+            border-left: solid 0.5rem #773399;
+            background-color: #e4c8f2;
+            margin: 0.5rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -17,8 +27,22 @@
         </ul>
     </h2>
 
-    <script type="module" src="./main.js"></script>
-    <script type="module" src="./index.js"></script>
+    <h1>Movie List</h1>
+    <ul id="movie-list">
+        <li data-director="Director 1" data-year="2020">Movie 1</li>
+        <li data-director="Director 2" data-year="2019">Movie 2</li>
+        <li data-director="Director 3" data-year="2018">Movie 3</li>
+        <li data-director="Director 4" data-year="2017">Movie 4</li>
+        <li data-director="Director 5" data-year="2016s">Movie 5</li>
+
+    </ul>
+
+    <div id="movie-details">
+
+    </div>
+    <script type="text/javascript" src="./movie.js"></script>
+    <!-- <script type="module" src="./main.js"></script>
+    <script type="module" src="./index.js"></script> -->
 </body>
 
 </html>
