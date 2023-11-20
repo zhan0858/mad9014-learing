@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observers</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        main,
+        .box {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .red {
+            background-color: rgb(232, 120, 120);
+            padding: 2rem;
+        }
+
+        .blue {
+            background-color: rgb(119, 119, 230);
+            padding: 2rem;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Resize Observers</h2>
+    <main>
+        <div class="red">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta deleniti obcaecati consequatur. Corporis
+                quam perferendis tenetur ratione doloremque rem atque quod nam odio vero sed, voluptatem deserunt
+                exercitationem delectus a.</p>
+        </div>
+
+        <div class="blue">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta deleniti obcaecati consequatur. Corporis
+                quam perferendis tenetur ratione doloremque rem atque quod nam odio vero sed, voluptatem deserunt
+                exercitationem delectus a.</p>
+        </div>
+        <div contenteditable="true">
+            test something random here to see if it works or not or not or not or not or not or not or not or not or
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const red = document.querySelector('.red');
+            const blue = document.querySelector('.blue');
+            const observer = new ResizeObserver(handleResize);
+            observer.observe(red);
+            observer.observe(blue);
+        });
+
+        function handleResize(entries) {
+            console.log(entries);
+            console.log(entries[0].contentRect.width);
+            // document.getElementById('red').innerHTML = `widtkoh: ${entries[0].contentRect.width}, height: ${entries[0].contentRect.height}`;
+            if (entries[0].contentRect.width >= 400) {
+                entries[0].target.style.backgroundColor = '#774883';
+                addPhoto();
+            } else {
+                entries[0].target.style.backgroundColor = '#e87878';
+                removePhoto();
+            }
+        }
+
+        function addPhoto() {
+            const imgDom = document.querySelector('.red img');
+            if (imgDom) {
+                return;
+            } else {
+                const img = document.createElement('img');
+                img.src = 'https://picsum.photos/390';
+                img.alt = 'random photo';
+                document.querySelector('.red').appendChild(img);
+            }
+
+        }
+
+        function removePhoto() {
+            const img = document.querySelector('.red img');
+            if (img) {
+                img.remove();
+            }
+
+        }
+    </script>
+
+    <!-- <script src="./main.js"></script> -->
+
+</body>
+
+</html>

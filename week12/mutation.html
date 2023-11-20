@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutation</title>
+</head>
+
+<body>
+    <div>
+        <h2>Mutation Observers</h2>
+        <main>
+            <div class="container">
+                <p contenteditable="true"> this is p tag and </p>
+            </div>
+            <div class="newbox"></div>
+        </main>
+    </div>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.container');
+            const p = document.querySelector('p');
+            const div = document.querySelector('.newbox');
+
+            const opts = {
+                attributes: true, //report if attributes are changed
+                attributeFilter: ['src', 'href'], //optional list of attributes to watch
+                attributeOldValue: true, //optional. if true old value will be saved for callback function
+                childList: true, //report if children are changed
+                characterData: false, //optional. if true, will save the text for the callback function
+                characterDataOldValue: false,//optional. if true old text value will be saved for callback function
+                subtree: false, //report if elements further down in the descendent tree are changed
+                //this last one, pluse the characterData ones can come with a performance hit.
+            };
+
+            const observer = new MutationObserver(handleMutations);
+            observer.observe(container, opts);
+            container.setAttribute('id', 'container');
+            container.appendChild(p);
+            // p.textContent = 'this is p tag and this is new text';
+            div.appendChild(p);
+
+        });
+
+
+        function handleMutations(mutations) {
+            console.log(mutations);
+            switch (mutations[0].type) {
+                case 'childList':
+                    //a child element was mutated
+                    console.log(mutations[0].target);
+                    //old and new values might be available if set in options
+                    break;
+                case 'attributes':
+                    //attribute was changed
+                    console.log(mutations[0].target);
+                    //we can find out which attribute was mutated
+                    console.log(mutations[0].attributeName);
+                    //plus the old and new values if set in options
+                    break;
+                default:
+                //subTree mutation
+            }
+
+            // mutations.forEach((mutation) => {
+            //     console.log(mutation);
+            // });
+        }
+
+
+    </script>
+
+</body>
+
+</html>
