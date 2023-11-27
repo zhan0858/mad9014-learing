@@ -1,0 +1,30 @@
+html{
+    font-family: "Jura", sans-serif;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.imageDiv{
+    width: 30%;
+    position: relative;
+}
+
+img{
+    width: 100%;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+
+
+.highlighter {
+  position: absolute;
+  background: rgba(0, 255, 0, 0.25);
+  border: 1px dashed #fff;
+  z-index: 1;
+}
