@@ -1,0 +1,30 @@
+body,
+h1{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: black;
+    padding: 4rem 0;
+    color: white;
+    text-align: center;
+}
+
+.page{
+    display: none;
+
+}
+
+.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
