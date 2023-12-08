@@ -24,7 +24,7 @@ const APP = {
         div.innerHTML = '';
 
         // history.replaceState({}, null, '#list');
-        history.replaceState({ data }, null, '#list');
+        history.replaceState(data, null, '#list');
         document.title = 'Movie List';
         data.results.forEach((movie) => {
             div.innerHTML +=
@@ -58,7 +58,7 @@ const APP2 = {
     displayCast: (data) => {
         let div = document.getElementById('main');
         div.innerHTML = '';
-        history.pushState({ data }, null, '#details');
+        history.pushState(data, null, '#details');
         document.title = 'Movie Cast';
         data.cast.forEach((cast) => {
             div.innerHTML +=
@@ -71,7 +71,7 @@ const APP2 = {
 
     },
     popIn: (ev) => {
-        console.log('pop');
+        console.log('popIn ===', history);
         console.log(location);
         // console.log(ev);
         // console.log(location);
@@ -81,9 +81,9 @@ const APP2 = {
         console.log(ev.state);
         if (ev.state) {
             if (hash === 'details') {
-                APP2.displayCast(ev.state.data);
+                APP2.displayCast(ev.state);
             } if (hash === 'list') {
-                APP.displayData(ev.state.data);
+                APP.displayData(ev.state);
             }
         }
     }

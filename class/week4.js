@@ -200,7 +200,7 @@ const data = [
 ];
 
 function filterKeyword(keyword) {
-	return data.filter(item) => item.name.includes(keyword));
+	// return data.filter(item) => item.name.includes(keyword));
 }
 console.log(filterKeyword("Glenna"));
 
